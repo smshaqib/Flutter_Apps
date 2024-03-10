@@ -1,4 +1,4 @@
-# first_project
+# fruit_ninja
 
 A new Flutter project.
 
