@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       home: MyHomePage(),
     );
   }
 }
 
 class MyHomePage extends StatelessWidget {
+  const MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -22,7 +26,7 @@ class MyHomePage extends StatelessWidget {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('p1_bg.jpg'), // Replace with your background image path
                 fit: BoxFit.cover,
@@ -33,7 +37,7 @@ class MyHomePage extends StatelessWidget {
           // Larger Overlay Image in the Middle
           Center(
             child: Image.asset(
-              'p1_icon.jpg', // Replace with your overlay image path
+              'assets/p1_icon.jpg', // Replace with your overlay image path
               width: 150.0, // Adjust the width as needed
               height: 150.0, // Adjust the height as needed
             ),
@@ -49,15 +53,15 @@ class MyHomePage extends StatelessWidget {
                   // Navigate to Page2 when the button is clicked
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => Page2()),
+                    MaterialPageRoute(builder: (context) => const Page2()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
-                  primary: Colors.blue, // Button background color
+                  backgroundColor: Colors.blue, // Button background color
                   elevation: 8.0, // Shadow elevation
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.all(8.0),
+                child: const Padding(
+                  padding: EdgeInsets.all(8.0),
                   child: Text(
                     'Get Started',
                     style: TextStyle(
@@ -76,23 +80,25 @@ class MyHomePage extends StatelessWidget {
 }
 
 class Page2 extends StatelessWidget {
+  const Page2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Page 2'),
+        title: const Text('Page 2'),
       ),
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.asset(
-              'p2_bg.jpg', // Replace with your image path for Page2
+              'assets/p2_bg.jpg', // Replace with your image path for Page2
               width: 400.0, // Increase the width
               height: 400.0, // Increase the height
             ),
-            SizedBox(height: 10.0), // Decrease the spacing
-            Text(
+            const SizedBox(height: 10.0), // Decrease the spacing
+            const Text(
               'Find your Comfort Food Here',
               style: TextStyle(
                 color: Colors.black, // Set text color to black
@@ -100,12 +106,12 @@ class Page2 extends StatelessWidget {
                 fontWeight: FontWeight.bold, // Increase the font weight
               ),
             ),
-            SizedBox(height: 5.0), // Decrease the spacing
-            Expanded(
+            const SizedBox(height: 5.0), // Decrease the spacing
+            const Expanded(
               child: Align(
                 alignment: Alignment.bottomCenter,
                 child: Padding(
-                  padding: const EdgeInsets.only(bottom: 10.0),
+                  padding: EdgeInsets.only(bottom: 10.0),
                   child: Text(
                     'Here you can find a chef or dish for every taste and color. Enjoy!',
                     textAlign: TextAlign.center, // Align text to the center
@@ -117,21 +123,21 @@ class Page2 extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 20.0), // Add some spacing
+            const SizedBox(height: 20.0), // Add some spacing
             ElevatedButton(
               onPressed: () {
                 // Navigate to Page3 when the button is clicked
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Page3()),
+                  MaterialPageRoute(builder: (context) => const Page3()),
                 );
               },
               style: ElevatedButton.styleFrom(
-                primary: Colors.blue, // Button background color
+                backgroundColor: Colors.blue, // Button background color
                 elevation: 8.0, // Shadow elevation
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(8.0),
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
                 child: Text(
                   'Next',
                   style: TextStyle(
@@ -151,6 +157,8 @@ class Page2 extends StatelessWidget {
 
 
 class Page3 extends StatelessWidget {
+  const Page3({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -158,7 +166,7 @@ class Page3 extends StatelessWidget {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('p1_bg.jpg'), // Replace with your background image path
                 fit: BoxFit.cover,
@@ -170,7 +178,7 @@ class Page3 extends StatelessWidget {
             top: MediaQuery.of(context).size.height / 4, // Adjust the top position as needed
             left: MediaQuery.of(context).size.width / 2 - 75.0, // Adjust the left position as needed
             child: Image.asset(
-              'p1_icon.jpg', // Replace with your image path
+              'assets/p1_icon.jpg', // Replace with your image path
               width: 150.0, // Adjust the width as needed
               height: 150.0, // Adjust the height as needed
             ),
@@ -183,38 +191,38 @@ class Page3 extends StatelessWidget {
             child: Column(
               children: [
                 // Email Input
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 // Password Input
-                TextField(
+                const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Continue With Text
-                Text(
+                const Text(
                   'Continue With',
                   style: TextStyle(
-                    color: Colors.white,
+                    color: Colors.black,
                     fontSize: 16.0,
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Continue with Google Button
                 ElevatedButton(
                   onPressed: () {
                     // Handle Google login
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.red, // Button background color for Google
+                    backgroundColor: Colors.white, // Button background color for Google
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -222,15 +230,15 @@ class Page3 extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Image.asset(
-                          'google_logo.jpg', // Replace with your Google logo image path
+                          'assets/google_logo.jpg', // Replace with your Google logo image path
                           width: 20.0,
                           height: 20.0,
                         ),
-                        SizedBox(width: 10.0),
-                        Text(
+                        const SizedBox(width: 10.0),
+                        const Text(
                           'Continue with Google',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 16.0,
                           ),
                         ),
@@ -238,14 +246,14 @@ class Page3 extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Continue with Facebook Button
                 ElevatedButton(
                   onPressed: () {
                     // Handle Facebook login
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue, // Button background color for Facebook
+                    backgroundColor: Colors.white, // Button background color for Facebook
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
@@ -253,15 +261,15 @@ class Page3 extends StatelessWidget {
                       mainAxisSize: MainAxisSize.min,
                       children: [
                         Image.asset(
-                          'facebook_logo.jpg', // Replace with your Facebook logo image path
+                          'assets/facebook_logo.jpg', // Replace with your Facebook logo image path
                           width: 20.0,
                           height: 20.0,
                         ),
-                        SizedBox(width: 10.0),
-                        Text(
+                        const SizedBox(width: 10.0),
+                        const Text(
                           'Continue with Facebook',
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Colors.black,
                             fontSize: 16.0,
                           ),
                         ),
@@ -269,18 +277,18 @@ class Page3 extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Login Button
                 ElevatedButton(
                   onPressed: () {
                     // Handle login
                   },
                   style: ElevatedButton.styleFrom(
-                    primary: Colors.blue, // Button background color for login
+                    backgroundColor: Colors.blue, // Button background color for login
                     elevation: 8.0, // Shadow elevation
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       'Login',
                       style: TextStyle(
