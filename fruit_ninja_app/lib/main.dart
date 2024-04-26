@@ -623,11 +623,6 @@ class _Page5State extends State<Page5> {
 }
 
 
-
-
-
-
-
 class Page6 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
