@@ -129,7 +129,7 @@ class Page2 extends StatelessWidget {
                 // Navigate to Page3 when the button is clicked
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  Page3()),
+                  MaterialPageRoute(builder: (context) =>  const Page3()),
                 );
               },
               style: ElevatedButton.styleFrom(
@@ -147,6 +147,8 @@ class Page2 extends StatelessWidget {
                 ),
               ),
             ),
+
+
           ],
         ),
       ),
@@ -156,6 +158,8 @@ class Page2 extends StatelessWidget {
 
 
 class Page3 extends StatelessWidget {
+  const Page3({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -163,7 +167,7 @@ class Page3 extends StatelessWidget {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('p1_bg.jpg'), // Replace with your background image path
                 fit: BoxFit.cover,
@@ -188,31 +192,31 @@ class Page3 extends StatelessWidget {
             child: Column(
               children: [
                 // Email Input
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 // Password Input
-                TextField(
+                const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Continue With Text
-                Text(
+                const Text(
                   'Continue With',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16.0,
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Continue with Google Button
                 ElevatedButton(
                   onPressed: () {
@@ -231,8 +235,8 @@ class Page3 extends StatelessWidget {
                           width: 20.0,
                           height: 20.0,
                         ),
-                        SizedBox(width: 10.0),
-                        Text(
+                        const SizedBox(width: 10.0),
+                        const Text(
                           'Continue with Google',
                           style: TextStyle(
                             color: Colors.black,
@@ -243,7 +247,7 @@ class Page3 extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Continue with Facebook Button
                 ElevatedButton(
                   onPressed: () {
@@ -262,8 +266,8 @@ class Page3 extends StatelessWidget {
                           width: 20.0,
                           height: 20.0,
                         ),
-                        SizedBox(width: 10.0),
-                        Text(
+                        const SizedBox(width: 10.0),
+                        const Text(
                           'Continue with Facebook',
                           style: TextStyle(
                             color: Colors.black,
@@ -274,7 +278,7 @@ class Page3 extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 // Buttons Row (Login and Sign In)
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -284,14 +288,14 @@ class Page3 extends StatelessWidget {
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Page4()), // Navigate to Page4
+                          MaterialPageRoute(builder: (context) => const Page4()), // Navigate to Page4
                         );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue, // Button background color for login
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Login',
                           style: TextStyle(
@@ -301,20 +305,20 @@ class Page3 extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(width: 10.0), // Adjust the width between buttons
+                    const SizedBox(width: 10.0), // Adjust the width between buttons
                     // Sign In Button
                     ElevatedButton(
                       onPressed: () {
                         Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => Page4()), // Navigate to Page4
+                          MaterialPageRoute(builder: (context) => const Page4()), // Navigate to Page4
                         );
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.blue, // Button background color for sign in
                       ),
-                      child: Padding(
-                        padding: const EdgeInsets.all(8.0),
+                      child: const Padding(
+                        padding: EdgeInsets.all(8.0),
                         child: Text(
                           'Sign In',
                           style: TextStyle(
@@ -341,6 +345,8 @@ class Page3 extends StatelessWidget {
 
 
 class Page4 extends StatelessWidget {
+  const Page4({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -348,7 +354,7 @@ class Page4 extends StatelessWidget {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('p1_bg.jpg'), // Replace with your background image path
                 fit: BoxFit.cover,
@@ -373,53 +379,53 @@ class Page4 extends StatelessWidget {
             child: Column(
               children: [
                 // Email Input
-                TextField(
+                const TextField(
                   decoration: InputDecoration(
                     labelText: 'Email',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 // Password Input
-                TextField(
+                const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 // Confirm Password Input
-                TextField(
+                const TextField(
                   obscureText: true,
                   decoration: InputDecoration(
                     labelText: 'Confirm Password',
                     border: OutlineInputBorder(),
                   ),
                 ),
-                SizedBox(height: 10.0),
+                const SizedBox(height: 10.0),
                 // Continue With Text
-                Text(
+                const Text(
                   'Sign Up With',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 16.0,
                   ),
                 ),
-                SizedBox(height: 20.0),
+                const SizedBox(height: 20.0),
                 // Sign Up Button
                 ElevatedButton(
                   onPressed: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => Page5()), // Navigate to Page5
+                      MaterialPageRoute(builder: (context) => const Page5()), // Navigate to Page5
                     );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.blue, // Button background color for sign-up
                   ),
-                  child: Padding(
-                    padding: const EdgeInsets.all(8.0),
+                  child: const Padding(
+                    padding: EdgeInsets.all(8.0),
                     child: Text(
                       'Sign Up',
                       style: TextStyle(
@@ -441,7 +447,7 @@ class Page4 extends StatelessWidget {
                 Navigator.pop(context); // Navigate back to Page3
               },
               backgroundColor: Colors.blue,
-              child: Icon(Icons.arrow_back),
+              child: const Icon(Icons.arrow_back),
             ),
           ),
         ],
@@ -455,6 +461,8 @@ class Page4 extends StatelessWidget {
 
 
 class Page5 extends StatefulWidget {
+  const Page5({super.key});
+
   @override
   _Page5State createState() => _Page5State();
 }
@@ -469,7 +477,7 @@ class _Page5State extends State<Page5> {
         children: [
           // Background Image
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage('p1_bg.jpg'), // Replace with your background image path
                 fit: BoxFit.cover,
@@ -483,7 +491,7 @@ class _Page5State extends State<Page5> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 // Big Text "Payment Method"
-                Text(
+                const Text(
                   'Payment Method',
                   style: TextStyle(
                     color: Colors.black,
@@ -491,9 +499,9 @@ class _Page5State extends State<Page5> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                SizedBox(height: 10.0), // Added spacing
+                const SizedBox(height: 10.0), // Added spacing
                 // Small Text "This data will be displayed in your account profile for security"
-                Text(
+                const Text(
                   'This data will be displayed in your account profile for security',
                   style: TextStyle(
                     color: Colors.black,
@@ -501,7 +509,7 @@ class _Page5State extends State<Page5> {
                   ),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 20.0), // Added spacing
+                const SizedBox(height: 20.0), // Added spacing
                 // Rest of the content (payment buttons) remains unchanged
                 ElevatedButton(
                   onPressed: () {
@@ -511,7 +519,7 @@ class _Page5State extends State<Page5> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _selectedButton == 'paypal' ? Colors.blue : Colors.white, // Button background color
-                    minimumSize: Size(700, 100), // Button size
+                    minimumSize: const Size(700, 100), // Button size
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                       side: BorderSide(color: _selectedButton == 'paypal' ? Colors.blue : Colors.transparent, width: 2.0),
@@ -523,7 +531,7 @@ class _Page5State extends State<Page5> {
                     height: 80.0, // Image height
                   ),
                 ),
-                SizedBox(height: 20.0), // Added spacing
+                const SizedBox(height: 20.0), // Added spacing
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
@@ -532,7 +540,7 @@ class _Page5State extends State<Page5> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _selectedButton == 'bcash' ? Colors.blue : Colors.white, // Button background color
-                    minimumSize: Size(700, 100), // Button size
+                    minimumSize: const Size(700, 100), // Button size
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                       side: BorderSide(color: _selectedButton == 'blue' ? Colors.green : Colors.transparent, width: 2.0),
@@ -544,7 +552,7 @@ class _Page5State extends State<Page5> {
                     height: 80.0, // Image height
                   ),
                 ),
-                SizedBox(height: 20.0), // Added spacing
+                const SizedBox(height: 20.0), // Added spacing
                 ElevatedButton(
                   onPressed: () {
                     setState(() {
@@ -553,7 +561,7 @@ class _Page5State extends State<Page5> {
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: _selectedButton == 'nogod' ? Colors.blue : Colors.white, // Button background color
-                    minimumSize: Size(700, 100), // Button size
+                    minimumSize: const Size(700, 100), // Button size
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(8.0),
                       side: BorderSide(color: _selectedButton == 'nogod' ? Colors.blue : Colors.transparent, width: 2.0),
@@ -565,28 +573,28 @@ class _Page5State extends State<Page5> {
                     height: 80.0, // Image height
                   ),
                 ),
-                SizedBox(height: 20.0), // Added spacing
+                const SizedBox(height: 20.0), // Added spacing
               ],
             ),
           ),
           // Next Button
           Positioned(
-            bottom: 20.0,
-            left: 800.0,
-            right: 800.0,
+            bottom: 100,
+            right: 50,
+            left: 50,
             child: ElevatedButton(
               onPressed: () {
                 // Navigate to Page 6
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => Page6()),
+                  MaterialPageRoute(builder: (context) => const Page6()),
                 );
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue, // Button background color
-                minimumSize: Size(200, 50), // Button size
+                minimumSize: const Size(200, 50), // Button size
               ),
-              child: Text(
+              child: const Text(
                 'NEXT',
                 style: TextStyle(
                   color: Colors.white,
@@ -606,93 +614,556 @@ class _Page5State extends State<Page5> {
               },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue, // Button background color
-                minimumSize: Size(50, 50), // Button size
-                shape: CircleBorder(),
+                minimumSize: const Size(50, 50), // Button size
+                shape: const CircleBorder(),
               ),
-              child: Icon(
+              child: const Icon(
                 Icons.arrow_back,
                 color: Colors.white,
                 size: 30.0,
               ),
             ),
           ),
+
         ],
       ),
+
+
     );
   }
 }
+
 
 
 class Page6 extends StatelessWidget {
+  const Page6({super.key});
+
+
+
+  MySnackBar(message, context){
+
+
+    return ScaffoldMessenger.of(context).showSnackBar(
+
+        SnackBar(content: Text(message), duration: Duration(microseconds: 600),)
+    );
+
+  }
+
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      body: Stack(
-        children: [
-          // Green Background Arrow Button
-          Positioned(
-            top: 40,
-            left: 20,
-            child: IconButton(
+
+      appBar: AppBar(
+
+        title: Text("Inventory"),
+        titleSpacing: 60,
+        centerTitle: true,
+        toolbarHeight: 100,
+        toolbarOpacity: 0.5,
+        elevation: 50,
+        backgroundColor: Colors.green,
+
+        actions: [
+
+          IconButton(onPressed: () {MySnackBar("I am Comment", context);}, icon: Icon(Icons.comment),),
+          IconButton(onPressed: () {MySnackBar("I am search", context);}, icon: Icon(Icons.search)),
+          IconButton(onPressed: () {MySnackBar("I am setting", context);}, icon: Icon(Icons.settings)),
+          IconButton(onPressed: () {MySnackBar("I am Email", context);}, icon: Icon(Icons.email)),
+
+        ],
+
+      ),
+
+      floatingActionButton: FloatingActionButton(
+
+        elevation: 100,
+        child: Icon(Icons.add),
+        backgroundColor: Colors.green,
+        onPressed: (){
+          MySnackBar("I am floating action button", context);
+        },
+      ),
+
+      bottomNavigationBar: BottomNavigationBar(
+
+          currentIndex: 1,
+
+          items: [
+
+            BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home"),
+            BottomNavigationBarItem(icon: Icon(Icons.message),label: "Contrac"),
+            BottomNavigationBarItem(icon: Icon(Icons.person),label: "profile"),
+
+          ],
+
+          onTap: (int index){
+
+            if(index==0){
+
+              MySnackBar("Iam home bottom Menu", context);
+            }
+            if(index==1){
+
+              MySnackBar("Iam contract bottom Menu", context);
+            }
+            if(index==2){
+
+              MySnackBar("Iam profile bottom Menu", context);
+            }
+
+          }
+
+      ),
+
+      drawer: Drawer(
+
+        //list view er vetore sob item children
+
+        child: ListView(
+
+
+
+          children: [
+            ElevatedButton(
               onPressed: () {
-                Navigator.pop(context);
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Page5()), // Navigate to Page5
+                );
               },
-              icon: Icon(
-                Icons.arrow_back,
-                color: Colors.white,
+              style: ElevatedButton.styleFrom(
+                backgroundColor: Colors.blue, // Button background color for sign-up
               ),
-              iconSize: 30,
-            ),
-          ),
-          // Centered Column for Content
-          Center(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                // Big Text "Set Your Location"
-                Text(
-                  'Set Your Location',
+              child: const Padding(
+                padding: EdgeInsets.all(8.0),
+                child: Text(
+                  'Sign Up',
                   style: TextStyle(
-                    color: Colors.black,
-                    fontSize: 36.0,
-                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 18.0,
                   ),
                 ),
-              ],
+              ),
             ),
-          ),
-        ],
+
+
+            DrawerHeader(
+
+              //userAccountsDrawer Special type of header for child.
+              //chile: Text("text") evabeo dea jay
+              child: UserAccountsDrawerHeader(
+
+
+
+                decoration: BoxDecoration(color: Colors.white),
+                accountName: Text("SM Shaqib", style: TextStyle(color: Colors.blue),),
+                accountEmail: Text("smshaqib@gmail.com", style: TextStyle(color: Colors.blue),),
+                currentAccountPicture: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3eFRPDUsITnmJVYO_s1JCHp6BtIqSU8OtJifOj4xIf_cvt5jIS6jWIhYjlcKtUXYlFGM&usqp=CAU'),
+
+                onDetailsPressed: (){MySnackBar("This Is Profile", context);},
+
+              ),
+
+            ),
+
+            ListTile(
+
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: () {MySnackBar("Home", context);},
+
+            ),
+
+            ListTile(
+              leading: Icon(Icons.contact_mail),
+              title: Text("Contract"),
+              onTap: () {MySnackBar("Contract", context);},
+            ),
+
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: () {MySnackBar("Profile", context);},
+            ),
+
+            ListTile(
+              leading: Icon(Icons.email),
+              title: Text("Email"),
+              onTap: () {MySnackBar("Email", context);},
+            ),
+
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: Text("Phone"),
+              onTap: () {MySnackBar("Phone", context);},
+            ),
+          ],
+        ),
+
       ),
+
+      body: Text("hello",),
+
+
+      endDrawer: Drawer(
+
+        //list view er vetore sob item children
+
+        child: ListView(
+
+          children: [
+            DrawerHeader(
+
+              //userAccountsDrawer Special type of header for child.
+              //chile: Text("text") evabeo dea jay
+              child: UserAccountsDrawerHeader(
+
+
+
+                decoration: BoxDecoration(color: Colors.white),
+                accountName: Text("SM Shaqib", style: TextStyle(color: Colors.blue),),
+                accountEmail: Text("smshaqib@gmail.com", style: TextStyle(color: Colors.blue),),
+                currentAccountPicture: Image.network('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3eFRPDUsITnmJVYO_s1JCHp6BtIqSU8OtJifOj4xIf_cvt5jIS6jWIhYjlcKtUXYlFGM&usqp=CAU'),
+
+                onDetailsPressed: (){MySnackBar("This Is Profile", context);},
+
+              ),
+
+            ),
+
+            ListTile(
+
+              leading: Icon(Icons.home),
+              title: Text("Home"),
+              onTap: () {MySnackBar("Home", context);},
+
+            ),
+
+            ListTile(
+              leading: Icon(Icons.contact_mail),
+              title: Text("Contract"),
+              onTap: () {MySnackBar("Contract", context);},
+            ),
+
+            ListTile(
+              leading: Icon(Icons.person),
+              title: Text("Profile"),
+              onTap: () {MySnackBar("Profile", context);},
+            ),
+
+            ListTile(
+              leading: Icon(Icons.email),
+              title: Text("Email"),
+              onTap: () {MySnackBar("Email", context);},
+            ),
+
+            ListTile(
+              leading: Icon(Icons.phone),
+              title: Text("Phone"),
+              onTap: () {MySnackBar("Phone", context);},
+            ),
+          ],
+        ),
+
+      ),
+
+
     );
+
   }
 }
 
 
+class Scroll extends StatelessWidget {
+
+  List<String> studentList = [
+
+    'shaqib',
+    'rakib',
+    'abir',
+    'hasan',
+    'mahmud',
+    'tmu',
+    'nahid',
+  ];
 
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.lightGreen.shade200,
+      appBar: AppBar(
+        backgroundColor: Colors.green,
+        title: Text(
+          "Home Scren",
+          style: TextStyle(color: Colors.white),
+        ),
+        leading: Icon(
+          Icons.home,
+          color: Colors.white,
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {
+//Scaffold Messeges
+              // ScaffoldMessenger.of(context).showSnackBar(
+              //
+              //   SnackBar(
+              //     content: Text(
+              //       "Your money has been Transfered",
+              //       style: TextStyle(color: Colors.black),
+              //     ),
+              //
+              //     backgroundColor: Colors.green,
+              //     duration: Duration(seconds: 1),
+              //   ),
+              //
+              // );
+//end of scaffold messeges
+
+              showDialog(
+                  context: context,
+                  builder: (context) {
+                    return AlertDialog(
+                      title: Text("Send Money"),
+                      content:
+                      Text("Are you sure that you want to send money"),
+                      actions: [],
+                    );
+                  });
+            },
+            icon: Icon(Icons.add),
+          ),
+        ],
+      ),
+
+      //example 1
+
+      // body: SingleChildScrollView(
+      //
+      //   child: Column(
+      //
+      //
+      //     children: [
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //       Text("asdfasd"),
+      //     ],
+      //   ),
+      // )
+
+      //example 2
+      // body: ListView.builder(
+      //
+      //   itemCount: studentList.length,
+      //
+      //   itemBuilder: (context,index){
+      //
+      //     //return Text('${index+1}', style: TextStyle(fontSize: 12),);
+      //     return Padding(
+      //
+      //       padding: EdgeInsets.all(8),
+      //
+      //       child: Column(
+      //
+      //         children: [
+      //           Text(studentList[index], style: TextStyle(),),
+      //
+      //           Divider(),
+      //         ],
+      //
+      //
+      //       ),
+      //
+      //     );
+      //
+      //   },
+      //
+      // ),
+
+      //example 3
+
+      // body: ListView.separated(
+      //
+      //   itemCount: studentList.length,
+      //
+      //   itemBuilder: (context,index){
+      //
+      //     //return Text('${index+1}', style: TextStyle(fontSize: 12),);
+      //     return Padding(
+      //
+      //       padding: EdgeInsets.all(8),
+      //
+      //       child: Row(
+      //
+      //         mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //
+      //         children: [
+      //           Text(studentList[index], style: TextStyle(),),
+      //
+      //           Text(studentList[index], style: TextStyle(),),
+      //         ],
+      //       ),
+      //
+      //     );
+      //
+      //   },
+      //
+      //   separatorBuilder: (context,index){
+      //
+      //     return Divider(
+      //       height: 21,
+      //       thickness: 2,
+      //       endIndent: 15,
+      //       indent: 8,
+      //       color: Colors.pink,
+      //
+      //     );
+      //
+      //   },
+      //
+      // ),
 
 
+      //example 4
+
+      // body: GridView(
+      //
+      //   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 5),
+      //
+      //   children: [
+      //
+      //     Text('1'),
+      //     Text('2'),
+      //     Text('3'),
+      //     Text('4'),
+      //     Text('5'),
+      //     Text('6'),
+      //     Text('7'),
+      //     Text('8'),
+      //
+      //
+      //   ],
+      //
+      // ),
+
+      //example 5
+
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+
+            ListView.builder(
+
+                itemCount: studentList.length,
+
+                itemBuilder: (context,index) {
+                  //return Text('${index+1}', style: TextStyle(fontSize: 12),);
+                  return Padding(
+
+                    padding: EdgeInsets.all(8),
+
+                    child: Column(
+
+                      children: [
+                        Text(studentList[index], style: TextStyle(),),
+
+                        Divider(),
+                      ],
 
 
+                    ),
+                  );
+                }
+            ),
+            SizedBox(
+
+              height: 200,
+
+              child: GridView.builder(
+
+                  shrinkWrap: true,
+
+                  itemCount: 100,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, childAspectRatio: 4,
+
+                    mainAxisSpacing: 10,
+                    crossAxisSpacing: 10,
 
 
+                  ),
+
+                  itemBuilder: (context, index){
 
 
+                    return Column(
+
+                      children: [
+
+                        Text('Roll - ${index}'),
+                        Text(studentList[index])
+
+                      ],
+
+                    );
+
+                  }
 
 
+              ),
+            ),
+          ],
+        ),
+      ),
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    );
+  }
+}
